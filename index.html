@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Simple pagination</title>
+        <!-- Bootstrap CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                <div class="posts"></div>
+                <div class="message" style="display:none;"></div>
+                <form action="proccess.php" method="post" id="form" role="form">
+                    <div class="form-group">
+                        <label for="name">name</label>
+                        <input type="text" name="name" class="form-control" placeholder="The name here">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">email</label>
+                        <input type="name" name="email" class="form-control" placeholder="The email here">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">message</label>
+                        <textarea name="message" class="form-control" rows="3" placeholder="The message here"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-default">Post</button>
+                </form>
+                <script src="js/jquery.js"></script>
+                <script src="js/main.js"></script>
+                <script>
+                    $(document).ready(function(){
+                    $('.posts').load('posts.php');
+                    });
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
